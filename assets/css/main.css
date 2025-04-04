@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+.post h1 {
+  font-weight: 900;
+  font-size: var(--text-xl);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post h2 {
+  font-weight: 900;
+  font-size: var(--text-xl);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post h3 {
+  font-weight: 900;
+  font-size: var(--text-lg);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post h4 {
+  font-weight: 900;
+  font-size: var(--text-lg);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post hr {
+  margin: calc(var(--spacing) * 4) 0;
+  border: none;
+  border-top: 1px solid var(--ui-border);
+}
+
+.post p {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post ul li,
+.post ol li {
+  margin-inline-start: calc(var(--spacing) * 4);
+}
+
+.post a {
+  color: var(--ui-primary);
+  text-decoration: none;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: var(--ui-radius);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.post blockquote {
+  color: var(--ui-text-muted);
+  margin-bottom: calc(var(--spacing) * 4);
+  padding: 0 calc(var(--spacing) * 4);
+  border-left: 4px solid var(--ui-border);
+  background-color: var(--ui-background);
+}
+
+.post pre {
+  margin-bottom: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4);
+  background-color: var(--ui-bg-muted);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+}
+
+.post table {
+  margin-bottom: calc(var(--spacing) * 4);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.post table th,
+.post table td {
+  padding: calc(var(--spacing) * 2);
+  border: 1px solid var(--ui-border);
+}
+
+.post table th {
+  background-color: var(--ui-bg-muted);
+  font-weight: 900;
+}
+
+.post table td {
+  background-color: var(--ui-background);
+}
