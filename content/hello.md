@@ -2,7 +2,7 @@
 
 ブログ記事のテストです
 
-**Bold** _Italic_ `code` !
+**Bold** *Italic* `code` !
 
 ## サブ見出し
 
@@ -26,7 +26,7 @@
 
 [リンクの例](https://example.com)
 
-![画像の例](https://picsum.photos/300/200)
+![画像の例](https://picsum.photos/600/400)
 
 ---
 
@@ -34,8 +34,8 @@
 
 > これは引用です。
 
-```python
-# Pythonのコード例
+```js
+// JavaScriptのコード例
 def hello_world():
     print("Hello, World!")
 ```
@@ -45,7 +45,7 @@ def hello_world():
 ## テーブルの例
 
 | 見出し1 | 見出し2 |
-|---------|---------|
+| ---- | ---- |
 | データ1 | データ2 |
 | データ3 | データ4 |
 
@@ -53,5 +53,5 @@ def hello_world():
 
 ## チェックリスト
 
-- [x] 完了したタスク
-- [ ] 未完了のタスク
+- 完了したタスク
+- 未完了のタスク
