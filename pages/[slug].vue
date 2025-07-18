@@ -22,38 +22,29 @@ useHead({
       {{ post.title }}
     </h1>
 
-    <p
-      v-if="post.date"
-      class="text-gray-500 mb-4 px-4"
-    >
+    <p v-if="post.date">
       {{ new Date(post.date).toLocaleDateString('ja-JP') }}
     </p>
 
     <div class="flex gap-2 mb-4 px-4">
-      <UButton
+      <span
         v-for="tag in post.tags"
-        :key="tag"
-        variant="outline"
-        icon="i-lucide-tag"
+        :key="`tag-${tag}`"
       >
         {{ tag }}
-      </UButton>
+      </span>
     </div>
 
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer
       :value="post"
-      class="px-4 markdown-body"
+      class="markdown-body"
     />
 
-    <div class="flex flex-col m-4">
-      <UButton
-        variant="soft"
-        icon="i-lucide-arrow-left"
-        :to="{ name: 'index' }"
-      >
+    <div>
+      <NuxtLink :to="{ name: 'index' }">
         もどる
-      </UButton>
+      </NuxtLink>
     </div>
   </main>
 </template>

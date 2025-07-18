@@ -1,10 +1,4 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
 @import "github-markdown-css/github-markdown.css";
-
-@theme {
-  --font-sans: "Zen Kaku Gothic Antique", sans-serif;
-}
 
 .markdown-body {
   font-family: inherit;
