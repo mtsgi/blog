@@ -7,7 +7,7 @@ const { data: posts } = await useAsyncData('blog', () => queryCollection('blog')
 </script>
 
 <template>
-  <div>
+  <main>
     <h1>
       ブログ記事一覧
     </h1>
@@ -16,20 +16,26 @@ const { data: posts } = await useAsyncData('blog', () => queryCollection('blog')
       {{ posts?.length }}件の記事
     </p>
 
-    <div>
-      <NuxtLink
+    <div class="blog-list">
+      <BlogLink
         v-for="post in posts"
         :key="`post-${post.id}`"
-        :to="post.path"
-      >
-        {{ post.title }}
-        <span>
-          {{ new Date(post.date).toLocaleDateString('ja-JP') }}
-        </span>
-        <span>
-          {{ post.description }}
-        </span>
-      </NuxtLink>
+        :post="post"
+      />
     </div>
-  </div>
+  </main>
 </template>
+
+<style lang="scss" scoped>
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>

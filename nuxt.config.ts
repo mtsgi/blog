@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       titleTemplate: '%s - mtsgi blog'
     }
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.scss'],
   compatibilityDate: '2024-11-01',
   eslint: {
     config: {
