@@ -26,16 +26,4 @@ const { data: posts } = await useAsyncData('blog', () => queryCollection('blog')
   </main>
 </template>
 
-<style lang="scss" scoped>
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-
-  .blog-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-</style>
+<style src="./index.scss" lang="scss" scoped />

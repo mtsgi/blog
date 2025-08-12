@@ -18,7 +18,7 @@ useHead({
 
 <template>
   <main>
-    <h1 class="text-3xl mb-4 px-4">
+    <h1>
       {{ post.title }}
     </h1>
 
@@ -26,13 +26,15 @@ useHead({
       {{ new Date(post.date).toLocaleDateString('ja-JP') }}
     </p>
 
-    <div class="flex gap-2 mb-4 px-4">
-      <span
+    <div
+      v-if="post.tags.length > 0"
+      class="tags"
+    >
+      <TagLink
         v-for="tag in post.tags"
         :key="`tag-${tag}`"
-      >
-        {{ tag }}
-      </span>
+        :tag="tag"
+      />
     </div>
 
     <!-- Render the blog post as Prose & Vue components -->
@@ -49,16 +51,4 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-
-  .footer {
-    padding-top: 1rem;
-    border-top: 2px solid var(--color-border);
-    margin-bottom: 2rem;
-  }
-}
-</style>
+<style src="./index.scss" lang="scss" scoped />
