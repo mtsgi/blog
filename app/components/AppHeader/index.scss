@@ -1,4 +1,4 @@
-header {
+.app-header {
   position: sticky;
   top: 0;
   display: flex;
@@ -11,18 +11,36 @@ header {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 
-  a {
+  .title {
     color: var(--color-text);
-    padding: 1rem;
-  }
-
-  a.title {
     text-decoration: none;
     font-size: var(--font-size-large);
     font-weight: bold;
+    padding: 1rem;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  .links {
+    display: flex;
+
+    .link {
+      font-size: var(--font-size-small);
+      color: var(--color-text);
+      padding: 1rem;
+    }
   }
 
   .spacer {
     flex-grow: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background-color: rgba(13, 17, 23, 0.5);
   }
 }

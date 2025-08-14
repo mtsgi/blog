@@ -5,14 +5,22 @@
 :root {
   --font-family-sans: 'Inter', 'Zen Kaku Gothic Antique', sans-serif;
   --font-family-mono: 'JetBrains Mono', monospace;
-  --font-size-large: 32px;
+  --font-size-xlarge: 32px;
+  --font-size-large: 20px;
   --font-size-base: 16px;
   --font-size-small: 14px;
   --color-primary: #3888ff;
   --color-text: #444;
   --color-text-secondary: #888;
   --color-border: #e0e0e0;
-  --color-white: #fff;
+  --color-bg: #fff;
+
+  @media (prefers-color-scheme: dark) {
+    --color-text: #fff;
+    --color-text-secondary: #bbb;
+    --color-border: #555;
+    --color-bg: #0d1117;
+  }
 }
 
 body {
@@ -20,6 +28,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-family-sans);
   font-size: var(--font-size-base);
+  background-color: var(--color-bg);
 
   a {
     color: var(--color-primary);
@@ -38,5 +47,12 @@ body {
 
   a {
     color: var(--color-primary);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    // highlightがダークモード対応していないため暫定対応
+    pre {
+      background-color: #f6f8fa;
+    }
   }
 }

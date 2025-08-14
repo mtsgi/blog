@@ -7,14 +7,21 @@
   border-radius: 1rem;
   text-decoration: none;
 
-  strong {
+  .title {
     color: var(--color-primary);
+    font-size: var(--font-size-large);
     font-weight: bold;
   }
 
-  span {
+  .detail {
     display: block;
     font-size: var(--font-size-small);
     color: var(--color-text-secondary);
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
   }
 }

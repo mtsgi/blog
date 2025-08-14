@@ -23,7 +23,9 @@ useHead({
     </h1>
 
     <p v-if="post.date">
-      {{ new Date(post.date).toLocaleDateString('ja-JP') }}
+      <time :datetime="post.date">
+        {{ new Date(post.date).toLocaleDateString('ja-JP') }}
+      </time>
     </p>
 
     <div
@@ -41,6 +43,7 @@ useHead({
     <ContentRenderer
       :value="post"
       class="markdown-body"
+      tag="article"
     />
 
     <div class="footer">

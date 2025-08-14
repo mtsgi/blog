@@ -11,13 +11,13 @@ const props = defineProps<{
     :to="props.post.path"
     class="blog-link"
   >
-    <strong>
+    <strong class="title">
       {{ props.post.title }}
     </strong>
-    <span>
+    <span class="detail">
       {{ new Date(props.post.date).toLocaleDateString('ja-JP') }}
     </span>
-    <span>
+    <span class="detail">
       {{ props.post.description }}
     </span>
   </NuxtLink>

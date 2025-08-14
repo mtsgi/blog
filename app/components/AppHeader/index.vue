@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="app-header">
     <NuxtLink
       to="/"
       class="title"
@@ -9,9 +9,14 @@
 
     <div class="spacer" />
 
-    <NuxtLink to="https://github.com/mtsgi">
-      GitHub
-    </NuxtLink>
+    <div class="links">
+      <NuxtLink
+        to="https://github.com/mtsgi"
+        class="link"
+      >
+        GitHub
+      </NuxtLink>
+    </div>
   </header>
 </template>
 
